@@ -1,6 +1,6 @@
 #version 330 compatibility
 
-out vec4 f_frag_colour;
+out vec4 frag_colour;
 
 in vec2 v_texcoord;
 in vec3 v_colour;
@@ -139,5 +139,5 @@ void main() {
 	vec2 borders = getBorder(v_texcoord);
 	out_colour = mix(out_colour, province_border, borders.x);
 	out_colour = mix(out_colour, country_border, borders.y);
-	f_frag_colour = out_colour;
+	frag_colour = out_colour;
 }
